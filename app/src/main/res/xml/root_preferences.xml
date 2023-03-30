@@ -1,0 +1,59 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/messages_header">
+
+        <EditTextPreference
+            app:key="signature"
+            app:title="@string/signature_title"
+            app:useSimpleSummaryProvider="true" />
+
+
+
+    </PreferenceCategory>
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="checkbox"
+        android:title="Check box preference" />
+    <PreferenceCategory app:title="Basics">
+
+        <SwitchPreferenceCompat
+            app:key="switch"
+            app:defaultValue="true"
+            app:summary="Click to Switch On or Off"
+            app:title="Switch Preference" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Advanced">
+
+        <ListPreference app:title="Dark Mode"
+            app:key="dark_mode"
+            app:useSimpleSummaryProvider="true"
+            app:defaultValue="1"
+            android:entries="@array/dark_mode_entries"
+            android:entryValues="@array/dark_mode_entries_values" />
+
+        <Preference
+            app:summary="Click to Open the website"
+            app:title="Website">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://www.centennialcollege.ca/"/>
+        </Preference>
+
+        <Preference app:title="Open New Activity"
+            app:summary="Click to open new Activity">
+
+            <intent
+                android:action="com.example.settingsscreen.SETTINGS_NEW_ACTIVITY"
+                android:targetPackage="com.example.settingsscreen"
+                android:targetClass="com.example.settingsscreen.MainActivity"/>
+
+
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
