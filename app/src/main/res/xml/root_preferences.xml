@@ -40,7 +40,7 @@
             app:title="Website">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://www.centennialcollege.ca/"/>
+                android:data="https://www.afar.com/magazine/best-travel-apps-to-download-before-your-next-trip"/>
         </Preference>
 
         <Preference app:title="Open New Activity"
